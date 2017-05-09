@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.loneyang.shadetextview.MainActivity">
+
+    <com.loneyang.shadetextview.ShadeTextView
+        android:id="@+id/shadeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        custom:text="ถึLōnêyáng غ้"
+        custom:firstColor="#161616"
+        custom:secondColor="#30c44b"
+        custom:textSize="50sp"
+        />
+        <!--custom:progress="20"-->
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shadeTextView"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:max="100"
+        android:layout_alignStart="@+id/shadeTextView"
+        android:layout_alignEnd="@+id/shadeTextView"/>
+
+    <SeekBar
+        android:id="@+id/seekBar_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:max="100"
+        android:layout_alignStart="@+id/seekBar"
+        android:layout_alignEnd="@+id/seekBar"/>
+    <SeekBar
+        android:id="@+id/seekBar_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar_right"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:max="100"
+        android:layout_alignStart="@+id/seekBar"
+        android:layout_alignEnd="@+id/seekBar"/>
+    <SeekBar
+        android:id="@+id/seekBar_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar_top"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:max="100"
+        android:layout_alignStart="@+id/seekBar"
+        android:layout_alignEnd="@+id/seekBar"/>
+
+</RelativeLayout>
